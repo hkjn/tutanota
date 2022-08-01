@@ -124,7 +124,7 @@ export default async function generateTemplate({nameSuffix, version, updateUrl, 
 				"target": [
 					{
 						"target": unpacked ? "dir" : "nsis",
-						"arch": "x64"
+						"arch": "arm64"
 					}
 				]
 			},
@@ -148,15 +148,15 @@ export default async function generateTemplate({nameSuffix, version, updateUrl, 
 					"LSUIElement": 1 //hide dock icon on startup
 				},
 				"target": unpacked
-					? [{"target": "dir", "arch": "x64"}]
+					? [{"target": "dir", "arch": "arm64"}]
 					: [
 						{
 							"target": "zip",
-							"arch": "x64"
+							"arch": "arm64"
 						},
 						{
 							"target": "dmg",
-							"arch": "x64"
+							"arch": "arm64"
 						}
 					]
 			},
@@ -170,7 +170,7 @@ export default async function generateTemplate({nameSuffix, version, updateUrl, 
 				"target": [
 					{
 						"target": unpacked ? "dir" : "AppImage",
-						"arch": "x64"
+						"arch": "arm64"
 					}
 				]
 			}
